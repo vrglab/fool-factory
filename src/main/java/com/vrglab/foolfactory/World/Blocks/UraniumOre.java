@@ -16,10 +16,12 @@ import net.minecraft.world.gen.placementmodifier.HeightmapPlacementModifier;
 
 import java.util.List;
 
-@FoolFactoryBlockMarker("uranium_ore")
+@FoolFactoryBlockMarker(UraniumOre.BLOCK_ID)
 public class UraniumOre extends FoolFactoryOreBlock {
+    public static final String BLOCK_ID = "uranium_ore";
+
     public UraniumOre() {
-        super(FabricBlockSettings.of(Material.STONE).strength(2f).requiresTool(), "uranium_ore");
+        super(FabricBlockSettings.of(Material.STONE).strength(2f).requiresTool(), UraniumOre.BLOCK_ID);
     }
 
     @Override
