@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model":"fool-factory:block/block_ruby"}
+  }
+}

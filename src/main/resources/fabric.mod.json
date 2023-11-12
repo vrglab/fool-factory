@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "fool-factory",
+	"version": "${version}",
+	"name": "Fool Factory",
+	"description": "This is the official mod for the modpack Fool Factory",
+	"authors": [
+		"Vrglab"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/fool-factory/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.vrglab.foolfactory.FoolFactory"
+		],
+		"client": [
+			"com.vrglab.foolfactory.FoolFactoryClient"
+		],
+		"fabric-datagen": [
+			"com.vrglab.foolfactory.FoolFactoryDataGenerator"
+		]
+	},
+	"mixins": [
+		"fool-factory.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.24",
+		"minecraft": "~1.19.2",
+		"java": ">=17",
+		"fabric-api": "*",
+		"immersive_portals": "*",
+		"create": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
