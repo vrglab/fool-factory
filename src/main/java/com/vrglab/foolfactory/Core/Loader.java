@@ -24,6 +24,9 @@ public abstract class Loader<F extends Annotation> {
     protected List<Class<?>> FindAnnotatedClasses(String package_, Class<? extends F> targetAnnotation) {
         InputStream stream = ClassLoader.getSystemClassLoader()
                 .getResourceAsStream(package_.replaceAll("[.]", "/"));
+        if(stream == null) {
+            return new ArrayList<>();
+        }
         BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
         Set<Class> classes = reader.lines()
                 .filter(line -> line.endsWith(".class"))
