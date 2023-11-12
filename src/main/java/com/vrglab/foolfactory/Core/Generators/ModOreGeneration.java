@@ -14,17 +14,7 @@ public class ModOreGeneration {
             if(block instanceof FoolFactoryOreBlock) {
                 FoolFactoryOreBlock mapped_block = (FoolFactoryOreBlock)block;
 
-                switch(mapped_block.Dimension()){
-                    case 0:
-                        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), mapped_block.GenerationFeature(), mapped_block.GetPlacedFeature().getKey().get());
-                        break;
-                    case 1:
-                        BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), mapped_block.GenerationFeature(), mapped_block.GetPlacedFeature().getKey().get());
-                        break;
-                    case 2:
-                        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), mapped_block.GenerationFeature(), mapped_block.GetPlacedFeature().getKey().get());
-                        break;
-                }
+                BiomeModifications.addFeature(mapped_block.PlacementContext(), mapped_block.GenerationFeature(), mapped_block.GetPlacedFeature().getKey().get());
             }
         }
     }

@@ -3,6 +3,8 @@ package com.vrglab.foolfactory.World.Blocks;
 import com.vrglab.foolfactory.Core.Handling.Blocks.FoolFactoryBaseBlock;
 import com.vrglab.foolfactory.Core.Handling.Blocks.FoolFactoryBlockMarker;
 import com.vrglab.foolfactory.Core.Handling.Blocks.FoolFactoryOreBlock;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Material;
 import net.minecraft.util.registry.RegistryEntry;
@@ -15,6 +17,7 @@ import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 import net.minecraft.world.gen.placementmodifier.HeightmapPlacementModifier;
 
 import java.util.List;
+import java.util.function.Predicate;
 
 @FoolFactoryBlockMarker(UraniumOre.BLOCK_ID)
 public class UraniumOre extends FoolFactoryOreBlock {
@@ -36,12 +39,12 @@ public class UraniumOre extends FoolFactoryOreBlock {
     }
 
     @Override
-    public int Dimension() {
-        return 0;
+    public GenerationStep.Feature GenerationFeature() {
+        return GenerationStep.Feature.UNDERGROUND_ORES;
     }
 
     @Override
-    public GenerationStep.Feature GenerationFeature() {
-        return GenerationStep.Feature.UNDERGROUND_ORES;
+    public Predicate<BiomeSelectionContext> PlacementContext() {
+        return BiomeSelectors.foundInOverworld();
     }
 }
