@@ -3,6 +3,8 @@
   "item.fool-factory.uranium": "Uranium",
 
   "block.fool-factory.block_ruby": "Ruby Block",
+  "block.fool-factory.uranium_ore": "Uranium Ore",
+  "block.fool-factory.ruby_ore": "Ruby Ore",
 
   "itemGroup.fool-factory.foolfactory": "Fool Factory"
 }

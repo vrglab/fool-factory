@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
       "fool-factory:block_ruby",
-      "fool-factory:uranium_ore"
+      "fool-factory:uranium_ore",
+      "fool-factory:ruby_ore"
   ]
 }

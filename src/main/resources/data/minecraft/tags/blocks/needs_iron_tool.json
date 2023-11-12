@@ -1,6 +1,7 @@
 {
   "replace": false,
   "value": [
-    "fool-factory:uranium_ore"
+    "fool-factory:uranium_ore",
+    "fool-factory:ruby_ore"
   ]
 }

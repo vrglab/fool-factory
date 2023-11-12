@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "fool-factory:block/ruby_ore"
+  }
+}
