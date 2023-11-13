@@ -3,6 +3,7 @@ package com.vrglab.foolfactory.World.ItemGroups;
 import com.vrglab.foolfactory.Core.Database.ItemDatabase;
 import com.vrglab.foolfactory.Core.Handling.ItemGroups.FoolFactoryItemGroup;
 import com.vrglab.foolfactory.Core.Handling.ItemGroups.FoolFactoryItemGroupMarker;
+import com.vrglab.foolfactory.Core.Handling.Items.FoolFactoryItem;
 import net.minecraft.item.Item;
 
 @FoolFactoryItemGroupMarker(FoolFactoryGroup.GROUP_ID)
@@ -16,6 +17,6 @@ public class FoolFactoryGroup extends FoolFactoryItemGroup {
 
     @Override
     protected Item Icon() {
-        return ItemDatabase.getInstance().GetEntry("ruby");
+        return (FoolFactoryItem)ItemDatabase.getInstance().GetEntry("ruby");
     }
 }
