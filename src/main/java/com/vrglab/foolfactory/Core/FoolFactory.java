@@ -1,15 +1,12 @@
-package com.vrglab.foolfactory;
+package com.vrglab.foolfactory.Core;
 
 import com.vrglab.foolfactory.Core.Generators.ModOreGeneration;
 import com.vrglab.foolfactory.Core.Handling.Blocks.BlockLoader;
+import com.vrglab.foolfactory.Core.Handling.ItemGroups.ItemGroupLoader;
 import com.vrglab.foolfactory.Core.Handling.Items.ItemLoader;
-import com.vrglab.foolfactory.Core.Handling.LootTable.LootTableModifier;
 import com.vrglab.foolfactory.Core.Handling.LootTable.LootTableModifierLoader;
 import com.vrglab.foolfactory.Helpers.ModInfo;
 import net.fabricmc.api.ModInitializer;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class FoolFactory implements ModInitializer {
 
@@ -17,6 +14,7 @@ public class FoolFactory implements ModInitializer {
 	public void onInitialize() {
 		ModInfo.LOGGER.info("Mod Initialized");
 
+		ItemGroupLoader.getInstance().Register();
 		ItemLoader.getInstance().ItemRegister();
 		BlockLoader.getInstance().BlockRegister();
 		LootTableModifierLoader.getInstance().Register();

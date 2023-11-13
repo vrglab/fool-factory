@@ -1,6 +1,7 @@
 package com.vrglab.foolfactory.Core.Handling.Blocks;
 
-import com.vrglab.foolfactory.Core.Handling.ItemGroups.ItemGroupsRegistry;
+import com.vrglab.foolfactory.Core.Database.ItemGroupDatabase;
+import com.vrglab.foolfactory.Core.Handling.ItemGroups.ItemGroupLoader;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemGroup;
 
@@ -12,7 +13,7 @@ public abstract class FoolFactoryBaseBlock extends Block implements FoolFactoryB
 
     @Override
     public ItemGroup getCreativeTab() {
-        return ItemGroupsRegistry.FOOLFACTORY_GROUP;
+        return ItemGroupDatabase.getInstance().GetEntry("foolfactory").getRegisteredItemGroup();
     }
 
     @Override

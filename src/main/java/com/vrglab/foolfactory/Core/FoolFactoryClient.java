@@ -1,4 +1,4 @@
-package com.vrglab.foolfactory;
+package com.vrglab.foolfactory.Core;
 
 import com.vrglab.foolfactory.Core.Database.BlockDatabase;
 import com.vrglab.foolfactory.Helpers.ModInfo;

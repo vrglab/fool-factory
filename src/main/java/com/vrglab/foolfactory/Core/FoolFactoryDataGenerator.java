@@ -1,4 +1,4 @@
-package com.vrglab.foolfactory;
+package com.vrglab.foolfactory.Core;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;

@@ -16,13 +16,13 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.vrglab.foolfactory.FoolFactory"
+          "com.vrglab.foolfactory.Core.FoolFactory"
 		],
 		"client": [
-			"com.vrglab.foolfactory.FoolFactoryClient"
+          "com.vrglab.foolfactory.Core.FoolFactoryClient"
 		],
 		"fabric-datagen": [
-			"com.vrglab.foolfactory.FoolFactoryDataGenerator"
+          "com.vrglab.foolfactory.Core.FoolFactoryDataGenerator"
 		]
 	},
 	"mixins": [
