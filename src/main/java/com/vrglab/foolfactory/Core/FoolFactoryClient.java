@@ -27,11 +27,12 @@ public class FoolFactoryClient implements ClientModInitializer {
                 }
             }
         }
+        ModInfo.LOGGER.info("Setting up Fluid block rendering");
         for (var fluid : FluidDatabase.getInstance().getDatalist()) {
             FluidRenderHandlerRegistry.INSTANCE.register(fluid.still_instance, fluid.flowing_instance, new SimpleFluidRenderHandler(
-                    new Identifier("minecraft:block/water_still"),
-                    new Identifier("minecraft:block/water_flow"),
-                    0xA1E038D0
+                    new Identifier(fluid.fluid.StillModel()),
+                    new Identifier(fluid.fluid.FlowingModel()),
+                    fluid.fluid.ColorTint()
             ));
             BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), fluid.still_instance, fluid.flowing_instance);
         }

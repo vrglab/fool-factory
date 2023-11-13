@@ -16,6 +16,7 @@ import net.minecraft.item.Item;
 import net.minecraft.state.StateManager;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.ColorHelper;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.BlockView;
@@ -59,6 +60,18 @@ public abstract class FoolFactoryFluid {
 
     public void setBucket(Item bucket) {
         this.bucket = bucket;
+    }
+
+    public int ColorTint() {
+        return ColorHelper.Argb.getArgb(1,1,1,1);
+    }
+
+    public String FlowingModel() {
+        return "minecraft:block/water_flow";
+    }
+
+    public String StillModel() {
+        return "minecraft:block/water_still";
     }
 
     public abstract String Name();
