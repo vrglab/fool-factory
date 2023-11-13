@@ -12,13 +12,12 @@ public class FoolFactory implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModInfo.LOGGER.info("Mod Initialized");
-
 		ItemGroupLoader.getInstance().Register();
 		ItemLoader.getInstance().ItemRegister();
 		BlockLoader.getInstance().BlockRegister();
 		LootTableModifierLoader.getInstance().Register();
 
 		ModOreGeneration.GenerateOres();
+		ModInfo.LOGGER.info("Mod Initialized");
 	}
 }
