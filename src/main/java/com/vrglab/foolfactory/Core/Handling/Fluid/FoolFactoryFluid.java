@@ -73,6 +73,9 @@ public abstract class FoolFactoryFluid {
     public String StillModel() {
         return "minecraft:block/water_still";
     }
+    public String ItemGroup() {
+        return "foolfactory";
+    }
 
     public abstract String Name();
     public abstract FabricBlockSettings GetBlockSettings();

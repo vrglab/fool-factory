@@ -2,9 +2,11 @@ package com.vrglab.foolfactory.Core.Handling.Fluid;
 
 import com.vrglab.foolfactory.Core.Database.BlockDatabase;
 import com.vrglab.foolfactory.Core.Database.ItemDatabase;
+import com.vrglab.foolfactory.Core.Handling.Blocks.FoolFactoryFluidBlock;
 import com.vrglab.foolfactory.Core.Handling.Items.FoolFactoryBucketItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.FluidBlock;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
@@ -61,6 +63,11 @@ public class FoolFactoryFlowableFluid extends FlowableFluid {
     }
 
     @Override
+    public boolean matchesType(Fluid fluid) {
+        return fluid == getStill() || fluid == getFlowing();
+    }
+
+    @Override
     public Item getBucketItem() {
         return (FoolFactoryBucketItem)ItemDatabase.getInstance().GetEntry(attachedFluid.Name()+"_bucket");
     }
@@ -106,7 +113,6 @@ public class FoolFactoryFlowableFluid extends FlowableFluid {
         public int getLevel(FluidState state) {
             return state.get(LEVEL);
         }
-
     }
 
     public static class FoolFactoryStill extends FoolFactoryFlowableFluid

@@ -57,7 +57,7 @@ public class FluidLoader extends Loader<FoolFactoryFluidMarker> {
             FoolFactoryFlowableFluid.FoolFactoryFlowing flowing_fluid_instance = new FoolFactoryFlowableFluid.FoolFactoryFlowing(mapped_item);
 
             //Register fluid
-            mapped_item.setStillFluid(Registry.register(Registry.FLUID, new Identifier(ModInfo.MOD_ID, item.name), still_fluid_instance));
+            mapped_item.setStillFluid(Registry.register(Registry.FLUID, new Identifier(ModInfo.MOD_ID, "still_"+item.name), still_fluid_instance));
             mapped_item.setFlowingFluid(Registry.register(Registry.FLUID, new Identifier(ModInfo.MOD_ID, "flowing_"+item.name), flowing_fluid_instance));
 
 
@@ -67,7 +67,7 @@ public class FluidLoader extends Loader<FoolFactoryFluidMarker> {
 
             //Register it's bucket item
             mapped_item.setBucket(Registry.register(Registry.ITEM, new Identifier(ModInfo.MOD_ID, item.name+"_bucket"), new FoolFactoryBucketItem(still_fluid_instance, mapped_item.GetItemSettings()
-                    .group(ItemGroupDatabase.getInstance().GetEntry("foolfactory").getRegisteredItemGroup()).recipeRemainder(Items.BUCKET).maxCount(1))));
+                    .group(ItemGroupDatabase.getInstance().GetEntry(mapped_item.ItemGroup()).getRegisteredItemGroup()).recipeRemainder(Items.BUCKET).maxCount(1))));
             ItemDatabase.getInstance().Store(item.name+"_bucket", (FoolFactoryBucketItem)mapped_item.getBucket());
 
             FluidDatabaseEntry databaseEntry = new FluidDatabaseEntry();
