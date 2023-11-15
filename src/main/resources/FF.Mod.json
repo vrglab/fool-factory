@@ -1,17 +1,13 @@
 {
-  "modid": "foolfactory",
+  "modid": "fool-factory-api",
   "check_packages": {
     "item_groups": [
-      ""
     ],
     "items": [
-      ""
     ],
     "blocks": [
-      ""
     ],
     "fluids": [
-      ""
     ],
     "loot_table_modifiers": [
 

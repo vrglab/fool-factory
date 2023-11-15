@@ -18,7 +18,7 @@ public class BlockLoader extends Loader<FoolFactoryBlockMarker> {
 
     public <T> List<RetrivedData<T>> GetItems() {
         List<RetrivedData<T>> classes = new ArrayList<>();
-        List<Class<?>> annotatedClasses = FindAnnotatedClasses(new String[]{"com.vrglab.foolfactory.World.Blocks"}, FoolFactoryBlockMarker.class);
+        List<Class<?>> annotatedClasses = FindAnnotatedClasses(ModInfo.GetBlockPackages(), FoolFactoryBlockMarker.class);
         for (Class<?> clazz : annotatedClasses) {
             try {
                 RetrivedData<T> item = new RetrivedData<>();

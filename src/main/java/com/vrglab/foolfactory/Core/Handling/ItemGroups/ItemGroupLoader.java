@@ -18,7 +18,7 @@ public class ItemGroupLoader extends Loader<FoolFactoryItemGroupMarker> {
 
     public <T> List<RetrivedData<T>> GetItems() {
         List<RetrivedData<T>> classes = new ArrayList<>();
-        List<Class<?>> annotatedClasses = FindAnnotatedClasses(new String[]{"com.vrglab.foolfactory.World.ItemGroups"}, FoolFactoryItemGroupMarker.class);
+        List<Class<?>> annotatedClasses = FindAnnotatedClasses(ModInfo.GetItemGroupPackages(), FoolFactoryItemGroupMarker.class);
         for (Class<?> clazz : annotatedClasses) {
             try {
                 RetrivedData<T> item = new RetrivedData<>();

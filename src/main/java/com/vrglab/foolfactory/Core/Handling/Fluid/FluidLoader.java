@@ -30,7 +30,7 @@ public class FluidLoader extends Loader<FoolFactoryFluidMarker> {
 
     public <T> List<RetrivedData<T>> GetItems() {
         List<RetrivedData<T>> classes = new ArrayList<>();
-        List<Class<?>> annotatedClasses = FindAnnotatedClasses(new String[]{"com.vrglab.foolfactory.World.Fluids"}, FoolFactoryFluidMarker.class);
+        List<Class<?>> annotatedClasses = FindAnnotatedClasses(ModInfo.GetFluidPackages(), FoolFactoryFluidMarker.class);
         for (Class<?> clazz : annotatedClasses) {
             try {
                 RetrivedData<T> item = new RetrivedData<>();

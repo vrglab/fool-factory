@@ -16,7 +16,7 @@ public class ItemLoader extends Loader<FoolFactoryItemMarker>{
 
     public <T> List<RetrivedData<T>> GetItems() {
         List<RetrivedData<T>> classes = new ArrayList<>();
-        List<Class<?>> annotatedClasses = FindAnnotatedClasses(new String[]{"com.vrglab.foolfactory.World.Items"}, FoolFactoryItemMarker.class);
+        List<Class<?>> annotatedClasses = FindAnnotatedClasses(ModInfo.GetItemPackages(), FoolFactoryItemMarker.class);
         for (Class<?> clazz : annotatedClasses) {
             try {
                 RetrivedData<T> item = new RetrivedData<>();

@@ -52,6 +52,17 @@ public abstract class Loader<F extends Annotation> {
         return classes;
     }
 
+    protected List<Class<?>> FindAnnotatedClasses(List<String> packages, Class<? extends F> targetAnnotation) {
+        List<Class<?>> classes = new ArrayList<>();
+
+        for (String package_: packages) {
+            for (Class<?> found_class: FindAnnotatedClasses(package_, targetAnnotation)) {
+                classes.add(found_class);
+            }
+        }
+        return classes;
+    }
+
     private Class getClass(String className, String packageName) {
         try {
             return Class.forName(packageName + "."

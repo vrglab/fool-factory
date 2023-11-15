@@ -33,5 +33,22 @@
 		"minecraft": "~1.19.2",
 		"java": ">=17",
 		"fabric-api": "*"
+	},
+	"check_packages": {
+		"item_groups": [
+
+		],
+		"items": [
+
+		],
+		"blocks": [
+
+		],
+		"fluids": [
+
+		],
+		"loot_table_modifiers": [
+
+		]
 	}
 }
