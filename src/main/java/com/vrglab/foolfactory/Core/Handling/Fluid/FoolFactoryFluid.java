@@ -74,7 +74,7 @@ public abstract class FoolFactoryFluid {
         return "minecraft:block/water_still";
     }
     public String ItemGroup() {
-        return "foolfactory";
+        return ModInfo.MOD_ID;
     }
 
     public abstract String Name();

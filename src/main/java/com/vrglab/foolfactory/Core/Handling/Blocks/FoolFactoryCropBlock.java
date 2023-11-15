@@ -2,6 +2,7 @@ package com.vrglab.foolfactory.Core.Handling.Blocks;
 
 import com.vrglab.foolfactory.Core.Database.ItemGroupDatabase;
 import com.vrglab.foolfactory.Core.Handling.ItemGroups.ItemGroupLoader;
+import com.vrglab.foolfactory.Helpers.ModInfo;
 import net.minecraft.block.CropBlock;
 import net.minecraft.item.ItemGroup;
 
@@ -12,7 +13,7 @@ public abstract class FoolFactoryCropBlock extends CropBlock implements FoolFact
 
     @Override
     public ItemGroup getCreativeTab() {
-        return ItemGroupDatabase.getInstance().GetEntry("foolfactory").getRegisteredItemGroup();
+        return ItemGroupDatabase.getInstance().GetEntry(ModInfo.MOD_ID).getRegisteredItemGroup();
     }
 
     @Override

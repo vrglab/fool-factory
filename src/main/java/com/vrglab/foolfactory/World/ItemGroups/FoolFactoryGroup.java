@@ -8,7 +8,7 @@ import net.minecraft.item.Item;
 
 @FoolFactoryItemGroupMarker(FoolFactoryGroup.GROUP_ID)
 public class FoolFactoryGroup extends FoolFactoryItemGroup {
-    public static final String GROUP_ID = "foolfactory";
+    public static final String GROUP_ID = "fool-factory";
 
     @Override
     protected String Name() {
