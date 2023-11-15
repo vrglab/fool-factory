@@ -3,7 +3,7 @@
 	"id": "fool-factory",
 	"version": "${version}",
 	"name": "Fool Factory",
-	"description": "This is the official mod for the modpack Fool Factory",
+	"description": "API to make mod making easier",
 	"authors": [
 		"Vrglab"
 	],
@@ -32,11 +32,6 @@
 		"fabricloader": ">=0.14.24",
 		"minecraft": "~1.19.2",
 		"java": ">=17",
-		"fabric-api": "*",
-		"immersive_portals": "*",
-		"create": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
+		"fabric-api": "*"
 	}
 }
