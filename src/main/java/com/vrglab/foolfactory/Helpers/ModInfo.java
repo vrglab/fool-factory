@@ -91,6 +91,7 @@ public class ModInfo {
         for (var package_:GetData("loot_table_modifiers")) {
             result.add(package_.getAsString());
         }
+        result.add("com.vrglab.foolfactory.World.LootTableModifiers");
         return result;
     }
 }

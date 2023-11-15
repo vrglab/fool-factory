@@ -19,7 +19,7 @@ public class LootTableModifierLoader extends Loader<FoolFactoryLootTableModifier
 
     public <T> List<RetrivedData<T>> GetItems() {
         List<RetrivedData<T>> classes = new ArrayList<>();
-        List<Class<?>> annotatedClasses = FindAnnotatedClasses(new String[]{"com.vrglab.foolfactory.World.LootTableModifiers"}, FoolFactoryLootTableModifierMarker.class);
+        List<Class<?>> annotatedClasses = FindAnnotatedClasses(ModInfo.GetLootTableModifierPackages(), FoolFactoryLootTableModifierMarker.class);
         for (Class<?> clazz : annotatedClasses) {
             try {
                 RetrivedData<T> item = new RetrivedData<>();
