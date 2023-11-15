@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "fool-factory:block_ruby"
+          "name": "fool-factory-api:block_ruby"
         }
       ]
     }

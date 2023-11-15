@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "fool-factory:item/uranium"
+    "layer0": "fool-factory-api:item/uranium"
   }
 }

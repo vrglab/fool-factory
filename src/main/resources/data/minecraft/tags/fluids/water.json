@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "fool-factory:still_oil",
-    "fool-factory:flowing_oil"
+    "fool-factory-api:still_oil",
+    "fool-factory-api:flowing_oil"
   ]
 }

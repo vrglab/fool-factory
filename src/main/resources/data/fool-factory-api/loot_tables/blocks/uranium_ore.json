@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "fool-factory:uranium_ore"
+              "name": "fool-factory-api:uranium_ore"
             },
             {
               "type": "minecraft:item",
@@ -35,7 +35,7 @@
                   "function": "minecraft:apply_bonus"
                 }
               ],
-              "name": "fool-factory:uranium"
+              "name": "fool-factory-api:uranium"
             }
           ]
         }

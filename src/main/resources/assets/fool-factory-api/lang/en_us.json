@@ -1,0 +1,10 @@
+{
+  "item.fool-factory-api.ruby": "Ruby",
+  "item.fool-factory-api.uranium": "Uranium",
+
+  "block.fool-factory-api.block_ruby": "Ruby Block",
+  "block.fool-factory-api.uranium_ore": "Uranium Ore",
+  "block.fool-factory-api.ruby_ore": "Ruby Ore",
+
+  "itemGroup.fool-factory-api.fool-factory-api-api": "Fool Factory"
+}

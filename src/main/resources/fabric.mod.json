@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 1,
-	"id": "fool-factory",
+	"id": "fool-factory-api",
 	"version": "${version}",
-	"name": "Fool Factory",
+	"name": "Fool Factory API",
 	"description": "API to make mod making easier",
 	"authors": [
 		"Vrglab"
@@ -12,7 +12,7 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/fool-factory/icon.png",
+	"icon": "assets/fool-factory-api/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [

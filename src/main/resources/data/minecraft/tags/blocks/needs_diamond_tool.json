@@ -1,6 +1,6 @@
 {
   "replace": false,
   "value": [
-    "fool-factory:block_ruby"
+    "fool-factory-api:block_ruby"
   ]
 }

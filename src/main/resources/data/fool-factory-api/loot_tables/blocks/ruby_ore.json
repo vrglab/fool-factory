@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "fool-factory:ruby_ore"
+              "name": "fool-factory-api:ruby_ore"
             },
             {
               "type": "minecraft:item",
@@ -35,7 +35,7 @@
                   "function": "minecraft:apply_bonus"
                 }
               ],
-              "name": "fool-factory:ruby"
+              "name": "fool-factory-api:ruby"
             }
           ]
         }
