@@ -1,0 +1,20 @@
+{
+  "modid": "foolfactory",
+  "check_packages": {
+    "item_groups": [
+      ""
+    ],
+    "items": [
+      ""
+    ],
+    "blocks": [
+      ""
+    ],
+    "fluids": [
+      ""
+    ],
+    "loot_table_modifiers": [
+
+    ]
+  }
+}
