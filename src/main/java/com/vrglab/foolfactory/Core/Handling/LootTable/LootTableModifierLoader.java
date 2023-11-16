@@ -7,6 +7,7 @@ import com.vrglab.foolfactory.Core.Handling.Items.ItemLoader;
 import com.vrglab.foolfactory.Core.Loader;
 import com.vrglab.foolfactory.Core.RetrivedData;
 import com.vrglab.foolfactory.Helpers.ModInfo;
+import com.vrglab.foolfactory.Helpers.ModMetadata;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -19,7 +20,7 @@ public class LootTableModifierLoader extends Loader<FoolFactoryLootTableModifier
 
     public <T> List<RetrivedData<T>> GetItems() {
         List<RetrivedData<T>> classes = new ArrayList<>();
-        List<Class<?>> annotatedClasses = FindAnnotatedClasses(ModInfo.GetLootTableModifierPackages(), FoolFactoryLootTableModifierMarker.class);
+        List<Class<?>> annotatedClasses = FindAnnotatedClasses(ModMetadata.GetLootTableModifierPackages(), FoolFactoryLootTableModifierMarker.class);
         for (Class<?> clazz : annotatedClasses) {
             try {
                 RetrivedData<T> item = new RetrivedData<>();

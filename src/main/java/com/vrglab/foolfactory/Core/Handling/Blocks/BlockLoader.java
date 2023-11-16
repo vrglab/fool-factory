@@ -4,6 +4,7 @@ import com.vrglab.foolfactory.Core.Database.BlockDatabase;
 import com.vrglab.foolfactory.Core.Loader;
 import com.vrglab.foolfactory.Core.RetrivedData;
 import com.vrglab.foolfactory.Helpers.ModInfo;
+import com.vrglab.foolfactory.Helpers.ModMetadata;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -18,7 +19,7 @@ public class BlockLoader extends Loader<FoolFactoryBlockMarker> {
 
     public <T> List<RetrivedData<T>> GetItems() {
         List<RetrivedData<T>> classes = new ArrayList<>();
-        List<Class<?>> annotatedClasses = FindAnnotatedClasses(ModInfo.GetBlockPackages(), FoolFactoryBlockMarker.class);
+        List<Class<?>> annotatedClasses = FindAnnotatedClasses(ModMetadata.GetBlockPackages(), FoolFactoryBlockMarker.class);
         for (Class<?> clazz : annotatedClasses) {
             try {
                 RetrivedData<T> item = new RetrivedData<>();

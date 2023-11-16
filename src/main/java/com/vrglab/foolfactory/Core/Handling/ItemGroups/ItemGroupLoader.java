@@ -6,6 +6,7 @@ import com.vrglab.foolfactory.Core.Handling.Items.ItemLoader;
 import com.vrglab.foolfactory.Core.Loader;
 import com.vrglab.foolfactory.Core.RetrivedData;
 import com.vrglab.foolfactory.Helpers.ModInfo;
+import com.vrglab.foolfactory.Helpers.ModMetadata;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
@@ -18,7 +19,7 @@ public class ItemGroupLoader extends Loader<FoolFactoryItemGroupMarker> {
 
     public <T> List<RetrivedData<T>> GetItems() {
         List<RetrivedData<T>> classes = new ArrayList<>();
-        List<Class<?>> annotatedClasses = FindAnnotatedClasses(ModInfo.GetItemGroupPackages(), FoolFactoryItemGroupMarker.class);
+        List<Class<?>> annotatedClasses = FindAnnotatedClasses(ModMetadata.GetItemGroupPackages(), FoolFactoryItemGroupMarker.class);
         for (Class<?> clazz : annotatedClasses) {
             try {
                 RetrivedData<T> item = new RetrivedData<>();

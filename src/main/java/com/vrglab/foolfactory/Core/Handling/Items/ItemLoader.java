@@ -5,6 +5,7 @@ import com.vrglab.foolfactory.Core.Handling.Blocks.FoolFactoryBlock;
 import com.vrglab.foolfactory.Core.Loader;
 import com.vrglab.foolfactory.Core.RetrivedData;
 import com.vrglab.foolfactory.Helpers.ModInfo;
+import com.vrglab.foolfactory.Helpers.ModMetadata;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -16,7 +17,7 @@ public class ItemLoader extends Loader<FoolFactoryItemMarker>{
 
     public <T> List<RetrivedData<T>> GetItems() {
         List<RetrivedData<T>> classes = new ArrayList<>();
-        List<Class<?>> annotatedClasses = FindAnnotatedClasses(ModInfo.GetItemPackages(), FoolFactoryItemMarker.class);
+        List<Class<?>> annotatedClasses = FindAnnotatedClasses(ModMetadata.GetItemPackages(), FoolFactoryItemMarker.class);
         for (Class<?> clazz : annotatedClasses) {
             try {
                 RetrivedData<T> item = new RetrivedData<>();
