@@ -1,5 +1,6 @@
 # Fool Factory
-Fool Factory is my personal Minecraft mod structure/base project, it's something to make creating mods somewhat easier for me
+Fool Factory is my personal Minecraft mod structure/base project, it's something to make creating mods somewhat easier for me.
+<b><i> Warning: This project is unfinished and on the backbruner, i am NOT activly working on it</i></b>
 
 # Minecraft Versions supported
 1. 1.19.2
